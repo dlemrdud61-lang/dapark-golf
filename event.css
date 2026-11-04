@@ -5,7 +5,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{font-family:Pretendard,-apple-system,"Malgun Gothic",sans-serif;background:var(--navy-900);color:var(--text);line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased}
+body{font-family:Pretendard,-apple-system,"Malgun Gothic",sans-serif;background:var(--navy-900);color:var(--text);line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased;overflow-x:clip;-webkit-text-size-adjust:100%}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .wrap{width:min(1160px,90%);margin:0 auto}
@@ -186,6 +186,14 @@ h2{font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.3;font-weight:800;letter-s
   .ev-footer{padding-bottom:110px}
 }
 @media (max-width:480px){
+  .sec{padding:64px 0}
+  .sec-head{margin-bottom:36px}
+  .ev-hero{padding:96px 0 64px;min-height:auto}
+  .apply-info dl{grid-template-columns:76px 1fr;gap:10px}
+  .b-card{padding:26px 20px}
+  .b-card p{min-height:0}
+  .faq summary{padding:18px}
+  .faq details p{padding:0 18px 18px}
   .benefit-grid{grid-template-columns:1fr}
   .cd-boxes div{width:64px}
   .cd-boxes strong{font-size:1.5rem}

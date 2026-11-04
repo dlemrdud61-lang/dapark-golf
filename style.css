@@ -5,7 +5,9 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{font-family:Pretendard,-apple-system,"Malgun Gothic",sans-serif;color:var(--ink);background:#fff;line-height:1.6;word-break:keep-all}
+body{font-family:Pretendard,-apple-system,"Malgun Gothic",sans-serif;color:var(--ink);background:#fff;line-height:1.6;word-break:keep-all;overflow-x:clip;-webkit-text-size-adjust:100%}
+img{max-width:100%}
+.community-grid>*,.course-panel>*,.about-grid>*,.loc-grid>*{min-width:0}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:0;background:none}
 .container{width:min(1200px,92%);margin:0 auto}
@@ -221,13 +223,53 @@ img.g:hover{transform:scale(1.03)}
   .nav a{padding:14px 0;border-bottom:1px solid var(--line)}
   .menu-toggle{display:flex}
   .link-sm{display:none}
-  .about-grid,.course-panel,.community-grid,.loc-grid,.member-inner{grid-template-columns:1fr}
+  .about-grid,.course-panel,.community-grid,.loc-grid,.member-inner{grid-template-columns:minmax(0,1fr)}
   .about-visual{height:400px}
   .price-grid{grid-template-columns:1fr}
   .section{padding:80px 0}
 }
 @media (max-width:600px){
-  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .section{padding:64px 0}
+  .section-head{margin-bottom:32px}
+  /* Hero */
+  .hero{min-height:auto;padding:96px 0 80px;justify-content:flex-start}
+  .hero-content{padding-top:0}
+  .hero h1{font-size:2rem}
+  .hero-sub{font-size:1rem;margin:1rem 0 1.6rem}
+  .hero-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .hero-btns .btn{padding:.85rem .5rem;font-size:.95rem}
+  .hero-btns .btn-event{grid-column:1/-1}
+  .hero-stats{grid-template-columns:repeat(2,1fr);margin-top:36px;padding:20px 0 0;row-gap:16px}
+  .hero-stats strong{font-size:1.7rem}
+  /* Booking: 16px inputs prevent iOS auto-zoom */
+  .quick{margin-top:-40px}
+  .quick-card input,.quick-card select{font-size:16px}
+  /* Course */
+  .course-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+  .course-tabs button{padding:.6rem 0;font-size:.85rem}
+  .course-panel{padding:16px;gap:20px;border-radius:20px}
+  .course-map{min-height:0;aspect-ratio:13/10}
+  .course-info h3{font-size:1.4rem}
+  /* About */
+  .about-visual{height:320px}
+  .about-badge{left:0;bottom:12px;padding:10px 14px}
+  .about-badge strong{font-size:1.2rem}
+  /* Price */
+  .price-card{padding:26px 22px}
+  .price strong{font-size:2rem}
+  .rules{padding:22px}
+  /* Community */
+  .section-head.row{align-items:flex-start}
+  .board-tabs button{padding:.55rem 1rem;font-size:.9rem}
+  .board li a{padding:16px 4px;gap:10px}
+  .board time{display:none}
+  /* Location */
+  .map{height:260px}
+  .loc-info dl{grid-template-columns:72px 1fr}
+  .loc-info .btn{width:100%}
+  /* Footer */
+  .footer-top nav{flex-wrap:wrap;gap:8px 16px}
+  .float-book{width:56px;height:56px;right:16px;bottom:16px}
   .quick-card{grid-template-columns:1fr;padding:22px}
   .quick-links{justify-content:center;flex-wrap:wrap;gap:1rem}
   .facility-grid{grid-template-columns:1fr}
