@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>무료 라운딩 이벤트 | 다파크골프 해운대</title>
+<meta name="description" content="다파크골프 해운대 그랜드 오픈 기념 무료 라운딩 이벤트 — 18홀 라운딩, 클럽 대여, 초보 레슨까지 모두 무료">
+<meta property="og:title" content="다파크골프 해운대 무료 라운딩 이벤트">
+<meta property="og:description" content="18홀 라운딩 + 클럽 대여 + 초보 레슨 모두 무료! 선착순 마감">
+<meta property="og:image" content="images/course-wide.jpg">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<link rel="stylesheet" href="event.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="ev-header" id="evHeader">
+  <div class="wrap ev-header-in">
+    <a href="index.html" class="ev-logo">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#ff7a1a"/><path d="M13 30V10l13 5-11 4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><circle cx="27" cy="27" r="3" fill="#fff"/></svg>
+      <span><b>DA PARK</b> GOLF</span>
+    </a>
+    <a href="#apply" class="cta cta-sm">무료 신청하기</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="ev-hero">
+  <div class="ev-hero-bg" aria-hidden="true"></div>
+  <div class="wrap ev-hero-in">
+    <span class="pill">🎉 GRAND OPEN 기념 · 선착순 300명</span>
+    <h1>파크골프,<br><span class="hl">처음이라면 무료</span>로<br>시작하세요</h1>
+    <p class="lead">18홀 라운딩 · 클럽 대여 · 초보 레슨까지<br><b>0원</b>으로 경험하는 다파크골프 해운대</p>
+
+    <div class="countdown" id="countdown" aria-live="polite">
+      <p>이벤트 마감까지</p>
+      <div class="cd-boxes">
+        <div><strong id="cdD">00</strong><span>일</span></div>
+        <div><strong id="cdH">00</strong><span>시간</span></div>
+        <div><strong id="cdM">00</strong><span>분</span></div>
+        <div><strong id="cdS">00</strong><span>초</span></div>
+      </div>
+    </div>
+
+    <a href="#apply" class="cta cta-lg">지금 무료로 신청하기 →</a>
+    <div class="slots" hidden><!-- 실제 신청 수와 연동되면 hidden 을 지우세요 -->
+      <div class="slots-bar"><i id="slotsFill"></i></div>
+      <p>잔여 <b id="slotsLeft">-</b>명 / 300명 · 마감 임박!</p>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="sec" id="benefit">
+  <div class="wrap">
+    <div class="sec-head fade-up">
+      <p class="kicker">BENEFIT</p>
+      <h2>이 모든 혜택이 <span class="hl">전부 무료</span></h2>
+      <p>정상가 <s>30,000원</s> 상당의 혜택을 이벤트 기간 동안 무료로 드립니다</p>
+    </div>
+    <div class="benefit-grid">
+      <article class="b-card fade-up">
+        <div class="b-ico">⛳</div>
+        <h3>18홀 무료 라운딩</h3>
+        <p>천연잔디 코스 18홀을<br>무료로 즐기세요</p>
+        <span class="b-price"><s>15,000원</s> → <b>0원</b></span>
+      </article>
+      <article class="b-card fade-up">
+        <div class="b-ico">🏌️</div>
+        <h3>클럽 · 공 무료 대여</h3>
+        <p>장비가 없어도 괜찮아요<br>빈손으로 오세요</p>
+        <span class="b-price"><s>5,000원</s> → <b>0원</b></span>
+      </article>
+      <article class="b-card fade-up">
+        <div class="b-ico">👨‍🏫</div>
+        <h3>초보 원포인트 레슨</h3>
+        <p>전문 코치가 기본 자세부터<br>30분 친절하게 알려드려요</p>
+        <span class="b-price"><s>10,000원</s> → <b>0원</b></span>
+      </article>
+      <article class="b-card b-bonus fade-up">
+        <div class="b-ico">🎁</div>
+        <h3>참가자 전원 선물</h3>
+        <p>다파크 로고 파크골프공 +<br>재방문 50% 할인쿠폰</p>
+        <span class="b-price"><b>BONUS</b></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Photo strip -->
+<section class="photo-strip fade-up" aria-label="코스 사진">
+  <img src="images/course-wide.jpg" alt="라운딩을 즐기는 이용객들">
+  <img src="images/course-view1.jpg" alt="코스 전경">
+  <img src="images/course-view2.jpg" alt="1번 홀 티잉 구역">
+</section>
+
+<!-- How -->
+<section class="sec sec-alt" id="how">
+  <div class="wrap">
+    <div class="sec-head fade-up">
+      <p class="kicker">HOW TO</p>
+      <h2>참여 방법은 <span class="hl">딱 3단계</span></h2>
+    </div>
+    <ol class="steps">
+      <li class="fade-up"><span class="num">01</span><h3>온라인 신청</h3><p>아래 신청서에 이름·연락처·<br>희망 날짜를 입력하세요</p></li>
+      <li class="fade-up"><span class="num">02</span><h3>확정 문자 수신</h3><p>1일 이내 예약 확정<br>문자를 보내드려요</p></li>
+      <li class="fade-up"><span class="num">03</span><h3>방문 후 즐기기</h3><p>프론트에서 문자를 보여주시면<br>바로 라운딩 시작!</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- Review -->
+<!-- 실제 후기가 모이면 hidden 을 지우세요 -->
+<section class="sec" id="review" hidden>
+  <div class="wrap">
+    <div class="sec-head fade-up">
+      <p class="kicker">REVIEW</p>
+      <h2>먼저 체험한 분들의 <span class="hl">한마디</span></h2>
+    </div>
+    <div class="review-grid">
+      <blockquote class="fade-up"><p>"골프는 어렵다고만 생각했는데 레슨 받고 30분 만에 공이 쭉쭉 나가요. 부모님 모시고 또 올게요!"</p><cite>김OO · 40대</cite></blockquote>
+      <blockquote class="fade-up"><p>"코스 관리가 정말 잘 되어 있고 경치가 좋아요. 무료라서 부담 없이 와봤다가 회원 등록했습니다."</p><cite>박OO · 60대</cite></blockquote>
+      <blockquote class="fade-up"><p>"친구들이랑 4명이서 왔는데 클럽까지 빌려줘서 빈손으로 와도 충분했어요. 강력 추천!"</p><cite>이OO · 30대</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- Apply form -->
+<section class="sec sec-apply" id="apply">
+  <div class="wrap apply-grid">
+    <div class="apply-info fade-up">
+      <p class="kicker">APPLY</p>
+      <h2>무료 라운딩<br><span class="hl">지금 신청하세요</span></h2>
+      <dl>
+        <dt>이벤트 기간</dt><dd id="evPeriod">2026.11.10(화) ~ 11.30(월)</dd>
+        <dt>대상</dt><dd>다파크골프 첫 방문 고객 (1인 1회)</dd>
+        <dt>인원</dt><dd>선착순 300명 · 1회 최대 4인 신청</dd>
+        <dt>장소</dt><dd>부산광역시 기장군 기장읍 청연로 12</dd>
+        <dt>문의</dt><dd><a href="tel:051-722-0000">051-722-0000</a></dd>
+      </dl>
+    </div>
+
+    <form class="apply-form fade-up" id="applyForm" novalidate>
+      <label><span>이름 <em>*</em></span>
+        <input type="text" name="name" placeholder="홍길동" required maxlength="20" autocomplete="name">
+      </label>
+      <label><span>연락처 <em>*</em></span>
+        <input type="tel" name="phone" placeholder="010-0000-0000" required inputmode="numeric" autocomplete="tel">
+      </label>
+      <div class="row2">
+        <label><span>희망 날짜 <em>*</em></span>
+          <input type="date" name="date" id="evDate" required>
+        </label>
+        <label><span>인원 <em>*</em></span>
+          <select name="people" required>
+            <option value="1">1명</option><option value="2" selected>2명</option>
+            <option value="3">3명</option><option value="4">4명</option>
+          </select>
+        </label>
+      </div>
+      <fieldset class="chips">
+        <legend>희망 시간대</legend>
+        <label><input type="radio" name="time" value="오전" checked><span>오전 (9~12시)</span></label>
+        <label><input type="radio" name="time" value="오후"><span>오후 (13~17시)</span></label>
+        <label><input type="radio" name="time" value="야간"><span>야간 (18~21시)</span></label>
+      </fieldset>
+      <label class="check"><input type="checkbox" name="lesson" checked> 무료 초보 레슨도 함께 신청할게요</label>
+      <label class="check"><input type="checkbox" name="agree" required> <span>[필수] 개인정보 수집·이용에 동의합니다 <button type="button" class="link" id="privacyBtn">보기</button></span></label>
+      <p class="form-err" id="formErr" role="alert"></p>
+      <button type="submit" class="cta cta-lg cta-block">무료 라운딩 신청 완료하기</button>
+      <p class="form-note">🔒 입력하신 정보는 이벤트 예약 안내 목적으로만 사용됩니다</p>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap narrow">
+    <div class="sec-head fade-up">
+      <p class="kicker">FAQ</p>
+      <h2>자주 묻는 질문</h2>
+    </div>
+    <div class="faq">
+      <details class="fade-up"><summary>정말 추가 비용이 전혀 없나요?</summary><p>네, 18홀 라운딩·클럽 대여·레슨 모두 무료입니다. 식음료 등 부대시설 이용 요금만 별도입니다.</p></details>
+      <details class="fade-up"><summary>파크골프를 한 번도 안 해봤는데 괜찮을까요?</summary><p>물론입니다! 처음 오시는 분들을 위한 이벤트예요. 무료 레슨을 신청하시면 코치가 기본부터 알려드립니다.</p></details>
+      <details class="fade-up"><summary>운동복이나 신발은 어떻게 하나요?</summary><p>편한 복장과 운동화면 충분합니다. 잔디 보호를 위해 스파이크 신발은 삼가 주세요.</p></details>
+      <details class="fade-up"><summary>신청 후 날짜를 바꾸고 싶어요.</summary><p>방문 1일 전까지 051-722-0000으로 연락 주시면 변경해 드립니다.</p></details>
+      <details class="fade-up"><summary>비가 오면 어떻게 되나요?</summary><p>우천 시 당일 문자로 안내드리며, 이벤트 기간 내 다른 날짜로 변경해 드립니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final fade-up">
+  <div class="wrap">
+    <h2>선착순 300명, <span class="hl">자리가 줄어들고 있어요</span></h2>
+    <p>지금 신청하고 이번 주말 가족·친구와 무료로 즐기세요</p>
+    <a href="#apply" class="cta cta-lg">무료 신청하기 →</a>
+  </div>
+</section>
+
+<footer class="ev-footer">
+  <div class="wrap">
+    <p>디에이파크골프 해운대 주식회사 | 대표이사 정지연 | 사업자등록번호 344-88-03958<br>
+    부산광역시 기장군 기장읍 청연로 12 | 예약문의 051-722-0000, 051-724-0000</p>
+    <p class="small">※ 이벤트 내용은 회사 사정에 따라 변경되거나 조기 종료될 수 있습니다. · <a href="index.html">홈페이지 바로가기</a></p>
+  </div>
+</footer>
+
+<!-- Mobile sticky CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <span hidden>잔여 <b id="stickyLeft">-</b>명</span>
+  <a href="#apply" class="cta">무료 신청하기</a>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h3 id="modalTitle"></h3>
+    <div id="modalBody"></div>
+    <button class="cta cta-block" id="modalClose">확인</button>
+  </div>
+</div>
+
+<script src="event.js"></script>
+</body>
+</html>

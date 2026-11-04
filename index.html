@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>다파크골프 해운대 | DA PARK GOLF</title>
+<meta name="description" content="부산 기장 바다와 숲 사이, 사계절 즐기는 프리미엄 파크골프장 다파크골프 해운대">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="currentColor"/><path d="M13 30V10l13 5-11 4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><circle cx="27" cy="27" r="3" fill="#fff"/></svg>
+      <span><b>DA PARK</b> GOLF</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#about">파크골프장 소개</a>
+      <a href="#course">코스소개</a>
+      <a href="#guide">이용안내</a>
+      <a href="#facility">부대시설</a>
+      <a href="#member">회원분양</a>
+      <a href="#community">커뮤니티</a>
+      <a href="#location">오시는 길</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#login" class="link-sm">로그인</a>
+      <a href="#booking" class="btn btn-primary btn-sm">실시간 예약</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-content">
+    <p class="eyebrow">BUSAN · GIJANG · HAEUNDAE</p>
+    <h1>바다 바람을 품은<br><em>프리미엄 파크골프</em>의 시작</h1>
+    <p class="hero-sub">남녀노소 누구나, 365일 언제든.<br>다파크골프 해운대에서 가장 즐거운 한 타를 경험하세요.</p>
+    <div class="hero-btns">
+      <a href="event.html" class="btn btn-event">🎉 무료 라운딩 이벤트</a>
+      <a href="#booking" class="btn btn-primary">지금 예약하기</a>
+      <a href="#course" class="btn btn-ghost">코스 둘러보기</a>
+    </div>
+  </div>
+  <div class="container hero-stats">
+    <div><strong data-count="36">0</strong><span>홀 코스</span></div>
+    <div><strong data-count="365">0</strong><span>연중무휴 운영</span></div>
+    <div><strong data-count="4">0</strong><span>개 테마 코스</span></div>
+    <div><strong data-count="500">0</strong><span>대 주차 공간</span></div>
+  </div>
+</section>
+
+<!-- ===== Quick Booking ===== -->
+<section class="quick" id="booking">
+  <div class="container">
+    <form class="quick-card" id="bookingForm">
+      <div class="quick-title">
+        <h2>실시간 예약</h2>
+        <p>원하는 날짜와 시간을 선택하세요</p>
+      </div>
+      <label>날짜<input type="date" id="bDate" required></label>
+      <label>시간대
+        <select id="bTime" required>
+          <option value="">선택</option>
+          <option>06:00 ~ 09:00 (조조)</option>
+          <option>09:00 ~ 12:00 (오전)</option>
+          <option>12:00 ~ 15:00 (오후)</option>
+          <option>15:00 ~ 18:00 (오후)</option>
+          <option>18:00 ~ 21:00 (야간)</option>
+        </select>
+      </label>
+      <label>코스
+        <select id="bCourse">
+          <option>A · 오션 코스</option>
+          <option>B · 포레스트 코스</option>
+          <option>C · 가든 코스</option>
+          <option>D · 레이크 코스</option>
+        </select>
+      </label>
+      <label>인원
+        <div class="stepper"><button type="button" data-step="-1">−</button><input type="number" id="bPeople" value="4" min="1" max="4" readonly><button type="button" data-step="1">+</button></div>
+      </label>
+      <button class="btn btn-primary btn-lg" type="submit">예약 가능 조회</button>
+    </form>
+    <div class="quick-links">
+      <a href="#">예약확인 / 취소 →</a>
+      <a href="#guide">예약안내 →</a>
+      <a href="tel:051-722-0000">전화예약 051-722-0000</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual">
+      <figure class="about-img a1"><img src="images/course-view1.jpg" alt="클럽하우스에서 내려다본 다파크골프 코스 전경"><figcaption>Course View</figcaption></figure>
+      <figure class="about-img a2"><img src="images/course-view2.jpg" alt="숲과 도심이 어우러진 다파크골프 코스"><figcaption>Forest Trail</figcaption></figure>
+      <div class="about-badge"><strong>NEW</strong>2026 GRAND OPEN</div>
+    </div>
+    <div class="about-text">
+      <p class="eyebrow">ABOUT DA PARK</p>
+      <h2>자연 속에서 건강을 나누는<br>모두의 골프장</h2>
+      <p>파크골프는 공 하나, 클럽 하나로 누구나 쉽게 즐길 수 있는 생활 스포츠입니다. 다파크골프 해운대는 기장의 바다와 숲을 그대로 살린 천연잔디 코스에서 가족, 친구, 동호회가 함께 어울리는 공간을 만들어 갑니다.</p>
+      <ul class="feature-list">
+        <li><b>천연잔디 36홀</b> 전문 관리팀이 매일 관리하는 최상의 그린 컨디션</li>
+        <li><b>야간 라운딩</b> LED 조명으로 밤 9시까지 시원하게</li>
+        <li><b>초보자 레슨</b> 처음 오신 분을 위한 무료 기초 강습 운영</li>
+      </ul>
+      <a href="#" class="btn btn-outline">파크골프 소개 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Course ===== -->
+<section class="section course" id="course">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">COURSE</p>
+      <h2>네 가지 매력의 테마 코스</h2>
+      <p>각 9홀, 총 36홀 · 코스별로 전혀 다른 풍경과 공략을 즐겨보세요</p>
+    </div>
+    <div class="course-tabs" role="tablist">
+      <button class="active" data-course="0">A 오션</button>
+      <button data-course="1">B 포레스트</button>
+      <button data-course="2">C 가든</button>
+      <button data-course="3">D 레이크</button>
+    </div>
+    <div class="course-panel">
+      <div class="course-map" id="courseMap"></div>
+      <div class="course-info">
+        <h3 id="cTitle"></h3>
+        <p id="cDesc"></p>
+        <dl class="course-meta">
+          <div><dt>홀 수</dt><dd>9홀</dd></div>
+          <div><dt>총 거리</dt><dd id="cLen"></dd></div>
+          <div><dt>PAR</dt><dd>33</dd></div>
+          <div><dt>난이도</dt><dd id="cLevel"></dd></div>
+        </dl>
+        <div class="hole-list" id="cHoles"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Guide / Price ===== -->
+<section class="section guide" id="guide">
+  <div class="container">
+    <div class="section-head light">
+      <p class="eyebrow">GUIDE &amp; PRICE</p>
+      <h2>이용안내 · 요금안내</h2>
+      <p>운영시간 06:00 ~ 21:00 · 연중무휴 (기상악화 시 변동)</p>
+    </div>
+    <div class="price-grid">
+      <article class="price-card">
+        <h3>일반</h3>
+        <p class="price"><strong>15,000</strong>원 <small>/ 18홀</small></p>
+        <ul><li>주중 · 주말 동일 요금</li><li>36홀 이용 시 25,000원</li><li>클럽 대여 5,000원</li></ul>
+      </article>
+      <article class="price-card featured">
+        <span class="tag">인기</span>
+        <h3>경로 · 우대</h3>
+        <p class="price"><strong>10,000</strong>원 <small>/ 18홀</small></p>
+        <ul><li>만 65세 이상</li><li>장애인 · 국가유공자</li><li>기장군민 20% 추가 할인</li></ul>
+      </article>
+      <article class="price-card">
+        <h3>정회원</h3>
+        <p class="price"><strong>무제한</strong> <small>연회원</small></p>
+        <ul><li>연중 무제한 라운딩</li><li>우선 예약권 (14일 전)</li><li>락카 · 사우나 무료</li></ul>
+      </article>
+    </div>
+    <div class="rules">
+      <h3>이용수칙</h3>
+      <ol>
+        <li>안전을 위해 앞 팀과 충분한 거리를 두고 플레이해 주세요.</li>
+        <li>한 팀은 최대 4인이며, 1인 1클럽 사용을 원칙으로 합니다.</li>
+        <li>잔디 보호를 위해 스파이크 없는 운동화를 착용해 주세요.</li>
+        <li>코스 내 음주 · 흡연 · 반려동물 동반은 제한됩니다.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Facility ===== -->
+<section class="section facility" id="facility">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">FACILITY</p>
+      <h2>라운딩 후에도 완벽하게</h2>
+    </div>
+    <div class="facility-grid">
+      <article class="fac f1"><div class="fac-icon">🏡</div><h3>클럽하우스</h3><p>탁 트인 오션뷰 라운지와 휴게 공간</p></article>
+      <article class="fac f2"><div class="fac-icon">♨️</div><h3>사우나 · 락카</h3><p>라운딩 후 개운한 휴식을 위한 사우나</p></article>
+      <article class="fac f3"><div class="fac-icon">🍽️</div><h3>레스토랑</h3><p>지역 제철 식재료로 만든 한식 메뉴</p></article>
+      <article class="fac f4"><div class="fac-icon">⛳</div><h3>프로샵</h3><p>클럽 · 공 · 의류까지 파크골프 전문 용품</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Membership ===== -->
+<section class="member" id="member">
+  <div class="container member-inner">
+    <div>
+      <p class="eyebrow">MEMBERSHIP</p>
+      <h2>다파크 회원이 되어<br>더 많은 혜택을 누리세요</h2>
+      <p>회원분양 · 상품권 · 패키지 여행 상품을 안내해 드립니다.</p>
+    </div>
+    <div class="member-actions">
+      <a href="#" class="member-item"><b>입회문의</b><span>정회원 · 가족회원 분양 안내</span></a>
+      <a href="#" class="member-item"><b>상품권</b><span>소중한 분께 건강을 선물하세요</span></a>
+      <a href="#" class="member-item"><b>패키지 여행</b><span>숙박 + 라운딩 올인원 상품</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Community ===== -->
+<section class="section community" id="community">
+  <div class="container">
+    <div class="section-head row">
+      <div><p class="eyebrow">COMMUNITY</p><h2>다파크 소식</h2></div>
+      <div class="board-tabs" id="boardTabs">
+        <button class="active" data-board="notice">공지사항</button>
+        <button data-board="event">이벤트</button>
+        <button data-board="join">조인</button>
+      </div>
+    </div>
+    <div class="community-grid">
+      <ul class="board" id="board"></ul>
+      <div class="gallery">
+        <img class="g" src="images/course-wide.jpg" alt="라운딩을 즐기는 이용객들">
+        <img class="g" src="images/course-view1.jpg" alt="코스 전경">
+        <img class="g" src="images/course-view2.jpg" alt="1번 홀 티잉 구역">
+        <div class="g g4"><span>더 많은 사진<br>준비 중</span></div>
+        <a href="#" class="g-more">갤러리 더보기 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Location ===== -->
+<section class="section location" id="location">
+  <div class="container loc-grid">
+    <div class="map" aria-label="지도">
+      <div class="map-pin"><span>DA PARK GOLF</span></div>
+    </div>
+    <div class="loc-info">
+      <p class="eyebrow">LOCATION</p>
+      <h2>오시는 길</h2>
+      <dl>
+        <dt>주소</dt><dd>부산광역시 기장군 기장읍 청연로 12</dd>
+        <dt>자가용</dt><dd>해운대 IC에서 약 15분 · 무료 주차 가능</dd>
+        <dt>대중교통</dt><dd>동해선 기장역 하차 후 셔틀버스 (30분 간격)</dd>
+        <dt>예약문의</dt><dd><a href="tel:051-722-0000">051-722-0000</a>, <a href="tel:051-724-0000">051-724-0000</a></dd>
+      </dl>
+      <a href="https://map.naver.com/v5/search/부산광역시 기장군 기장읍 청연로 12" target="_blank" rel="noopener" class="btn btn-primary">네이버 지도로 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <a href="#top" class="logo light"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="currentColor"/><path d="M13 30V10l13 5-11 4" fill="none" stroke="#14532d" stroke-width="2.4" stroke-linejoin="round"/><circle cx="27" cy="27" r="3" fill="#14532d"/></svg><span><b>DA PARK</b> GOLF</span></a>
+      <nav><a href="#">이용약관</a><a href="#"><b>개인정보처리방침</b></a><a href="#">이메일무단수집거부</a></nav>
+    </div>
+    <p class="footer-info">
+      디에이파크골프 해운대 주식회사 &nbsp;|&nbsp; 대표이사 정지연 &nbsp;|&nbsp; 사업자등록번호 344-88-03958<br>
+      부산광역시 기장군 기장읍 청연로 12 &nbsp;|&nbsp; 예약문의 051-722-0000, 051-724-0000
+    </p>
+    <p class="copy">© 2026 DA PARK GOLF HAEUNDAE. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="#booking" class="float-book">예약</a>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
