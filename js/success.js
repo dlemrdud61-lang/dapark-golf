@@ -31,6 +31,19 @@ function render(icon, title, text, r) {
   if (!user) return;
 
   const p = new URLSearchParams(location.search);
+
+  // 테스트 즉시 결제로 온 경우: 이미 결제 완료 상태 → 내역만 보여주기
+  const testOrder = p.get('order');
+  if (testOrder) {
+    const { data: r } = await sb.from('dapark_reservations').select('*').eq('order_no', testOrder).maybeSingle();
+    if (r && r.status === 'paid') {
+      render('🎉', '예약이 확정되었어요!', '라운딩 당일 프런트에서 성함을 말씀해 주세요.', r);
+    } else {
+      render('⚠️', '결제 내역을 찾을 수 없어요', '내 결제내역에서 확인해 주세요.');
+    }
+    return;
+  }
+
   const paymentKey = p.get('paymentKey');
   const orderId = p.get('orderId');
   const amount = Number(p.get('amount'));

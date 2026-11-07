@@ -3,6 +3,11 @@
 const SUPABASE_URL = 'https://ldwubqhmsfxbblojutep.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxkd3VicWhtc2Z4YmJsb2p1dGVwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQwNTA3NzcsImV4cCI6MjEwOTYyNjc3N30.O58HZgDclMGEAFzzdsOTkHCvD0FuxKqlVIBj9CESuK8';
 
+// 결제 방식
+// 'instant' : [결제하기]를 누르면 결제창 없이 바로 결제 완료 (테스트용, 실제 돈 이동 없음)
+// 'toss'    : 토스페이먼츠 결제창을 띄워서 결제 (실제 서비스용)
+const PAYMENT_MODE = 'instant';
+
 // 토스페이먼츠 결제위젯 "테스트" 클라이언트 키 (토스 공식 문서용 공개 테스트 키)
 // 테스트 모드라 실제 돈은 나가지 않습니다.
 // 본인 토스 계정 키로 바꾸려면 이 값과 Supabase secret TOSS_SECRET_KEY 를 함께 바꾸세요.

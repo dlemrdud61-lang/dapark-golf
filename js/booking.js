@@ -177,6 +177,25 @@ $('bookBtn').addEventListener('click', async () => {
     return;
   }
   currentOrder = rows[0];
+
+  // 2-A) 테스트 모드: 결제창 없이 바로 결제 완료
+  if (PAYMENT_MODE === 'instant') {
+    btn.textContent = '결제 중…';
+    const { data: paid, error: payErr } = await sb.rpc('dapark_test_pay', { p_order_no: currentOrder.order_no });
+    if (payErr || !paid || !paid.length) {
+      await sb.rpc('dapark_cancel_pending', { p_order_no: currentOrder.order_no });
+      currentOrder = null;
+      $('bookMsg').className = 'msg msg-error';
+      $('bookMsg').textContent = '결제하지 못했어요: ' + (payErr ? payErr.message : '알 수 없는 오류');
+      renderSummary();
+      loadStatus();
+      return;
+    }
+    location.href = 'success.html?order=' + encodeURIComponent(currentOrder.order_no);
+    return;
+  }
+
+  // 2-B) 토스 결제창 띄우기
   renderSummary();
   await openPayModal();
 });

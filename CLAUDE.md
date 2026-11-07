@@ -11,7 +11,10 @@
   - 이 사이트의 DB 객체는 모두 `dapark_` 로 시작 → goods-shop 의 `orders`, `products` 와 섞이지 않게.
   - 관리자 판별은 goods-shop 이 만든 `admins` 테이블 + `is_admin()` 함수를 함께 사용.
   - Auth 설정: **이메일 인증 꺼짐**(`mailer_autoconfirm=true`) → 가입 즉시 로그인. (프로젝트 공용 설정)
-- 결제: **토스페이먼츠 결제위젯 v2, 테스트 모드**. 클라이언트 키는 `js/config.js`, 시크릿 키는 Supabase secret `TOSS_SECRET_KEY` (goods-shop 과 공용).
+- 결제: `js/config.js` 의 `PAYMENT_MODE` 로 선택.
+  - **현재 `'instant'`** (사용자 요청): [결제하기] 누르면 결제창 없이 DB 함수 `dapark_test_pay` 가 바로 `paid` 처리 (method='테스트 결제'). 실제 돈 이동 없음.
+  - `'toss'`: 토스페이먼츠 결제위젯 v2 테스트 모드. 클라이언트 키는 `js/config.js`, 시크릿 키는 Supabase secret `TOSS_SECRET_KEY` (goods-shop 과 공용).
+  - 실제 운영 전에는 `'toss'` 로 바꾸고 `dapark_test_pay` 함수를 삭제해야 함 (누구나 무료로 결제완료 처리 가능하므로).
 
 ## 페이지
 | 파일 | 내용 | 로그인 |
