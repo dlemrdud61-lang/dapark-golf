@@ -44,7 +44,9 @@ document.getElementById('bookingForm').addEventListener('submit', e => {
   e.preventDefault();
   const time = document.getElementById('bTime').value;
   const course = document.getElementById('bCourse').value;
-  toast(`${bDate.value} ${time.split(' (')[0]} · ${course} · ${people.value}명 — 예약 가능합니다!`);
+  // 실시간 예약 페이지로 이동 (선택한 값을 그대로 가져감)
+  const q = new URLSearchParams({ date: bDate.value, slot: time.slice(0, 5), course: course.charAt(0), people: people.value });
+  location.href = 'booking.html?' + q.toString();
 });
 
 // Course data

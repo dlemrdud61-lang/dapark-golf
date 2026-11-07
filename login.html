@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>로그인 · 회원가입 | 다파크골프 해운대</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="member.css">
+</head>
+<body>
+
+<header class="header solid" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="currentColor"/><path d="M13 30V10l13 5-11 4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><circle cx="27" cy="27" r="3" fill="#fff"/></svg>
+      <span><b>DA PARK</b> GOLF</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html#course">코스소개</a>
+      <a href="index.html#guide">이용안내</a>
+      <a href="booking.html">실시간 예약</a>
+      <a href="index.html#location">오시는 길</a>
+      <div class="nav-auth-m" id="authNavM"></div>
+    </nav>
+    <div class="header-cta">
+      <div class="auth-nav" id="authNav"></div>
+      <a href="booking.html" class="btn btn-primary btn-sm">실시간 예약</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main class="page auth-wrap">
+  <div class="container auth-wrap">
+    <section class="card auth-card">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="currentColor"/><path d="M13 30V10l13 5-11 4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><circle cx="27" cy="27" r="3" fill="#fff"/></svg>
+        <span><b>DA PARK</b> GOLF</span>
+      </a>
+
+      <div class="tabs" role="tablist">
+        <button type="button" class="active" data-mode="login">로그인</button>
+        <button type="button" data-mode="signup">회원가입</button>
+      </div>
+
+      <form id="authForm" novalidate>
+        <div class="field" data-signup hidden>
+          <label for="name">이름</label>
+          <input id="name" autocomplete="name" placeholder="홍길동">
+        </div>
+        <div class="field" data-signup hidden>
+          <label for="phone">휴대폰 번호 <span class="opt">(선택 · 예약 안내용)</span></label>
+          <input id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="010-1234-5678">
+        </div>
+        <div class="field">
+          <label for="email">이메일</label>
+          <input id="email" type="email" autocomplete="email" placeholder="example@email.com" required>
+        </div>
+        <div class="field">
+          <label for="password">비밀번호</label>
+          <input id="password" type="password" autocomplete="current-password" placeholder="6자 이상" required>
+        </div>
+        <div class="field" data-signup hidden>
+          <label for="password2">비밀번호 확인</label>
+          <input id="password2" type="password" autocomplete="new-password" placeholder="한 번 더 입력">
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" id="submitBtn" type="submit">로그인</button>
+        <p class="msg" id="msg" role="alert"></p>
+      </form>
+
+      <p class="auth-hint" id="modeHint">처음이신가요? 위의 <b>회원가입</b> 탭을 눌러 주세요.</p>
+      <p class="test-hint">ℹ️ 이메일 인증 없이 가입 즉시 이용할 수 있어요.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="copy">© 2026 DA PARK GOLF HAEUNDAE. All rights reserved. &nbsp;·&nbsp; <a href="admin.html" class="admin-link">🔒 관리자 페이지</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

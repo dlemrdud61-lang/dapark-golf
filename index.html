@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="member.css">
 </head>
 <body>
 
@@ -26,10 +27,11 @@
       <a href="#member">회원분양</a>
       <a href="#community">커뮤니티</a>
       <a href="#location">오시는 길</a>
+      <div class="nav-auth-m" id="authNavM"></div>
     </nav>
     <div class="header-cta">
-      <a href="#login" class="link-sm">로그인</a>
-      <a href="#booking" class="btn btn-primary btn-sm">실시간 예약</a>
+      <div class="auth-nav" id="authNav"><a href="login.html">로그인</a></div>
+      <a href="booking.html" class="btn btn-primary btn-sm">실시간 예약</a>
       <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -44,7 +46,7 @@
     <p class="hero-sub">남녀노소 누구나, 365일 언제든.<br>다파크골프 해운대에서 가장 즐거운 한 타를 경험하세요.</p>
     <div class="hero-btns">
       <a href="event.html" class="btn btn-event">🎉 무료 라운딩 이벤트</a>
-      <a href="#booking" class="btn btn-primary">지금 예약하기</a>
+      <a href="booking.html" class="btn btn-primary">지금 예약하기</a>
       <a href="#course" class="btn btn-ghost">코스 둘러보기</a>
     </div>
   </div>
@@ -86,10 +88,10 @@
       <label>인원
         <div class="stepper"><button type="button" data-step="-1">−</button><input type="number" id="bPeople" value="4" min="1" max="4" readonly><button type="button" data-step="1">+</button></div>
       </label>
-      <button class="btn btn-primary btn-lg" type="submit">예약 가능 조회</button>
+      <button class="btn btn-primary btn-lg" type="submit">예약 · 결제하기</button>
     </form>
     <div class="quick-links">
-      <a href="#">예약확인 / 취소 →</a>
+      <a href="mypage.html">내 예약 · 결제내역 →</a>
       <a href="#guide">예약안내 →</a>
       <a href="tel:051-722-0000">전화예약 051-722-0000</a>
     </div>
@@ -268,7 +270,7 @@
   <div class="container">
     <div class="footer-top">
       <a href="#top" class="logo light"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="currentColor"/><path d="M13 30V10l13 5-11 4" fill="none" stroke="#14532d" stroke-width="2.4" stroke-linejoin="round"/><circle cx="27" cy="27" r="3" fill="#14532d"/></svg><span><b>DA PARK</b> GOLF</span></a>
-      <nav><a href="#">이용약관</a><a href="#"><b>개인정보처리방침</b></a><a href="#">이메일무단수집거부</a></nav>
+      <nav><a href="#">이용약관</a><a href="#"><b>개인정보처리방침</b></a><a href="#">이메일무단수집거부</a><a href="admin.html" class="admin-link">🔒 관리자</a></nav>
     </div>
     <p class="footer-info">
       디에이파크골프 해운대 주식회사 &nbsp;|&nbsp; 대표이사 정지연 &nbsp;|&nbsp; 사업자등록번호 344-88-03958<br>
@@ -281,6 +283,9 @@
 <a href="#booking" class="float-book">예약</a>
 <div class="toast" id="toast"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
